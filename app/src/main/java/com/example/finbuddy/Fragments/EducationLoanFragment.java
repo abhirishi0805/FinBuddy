@@ -1,4 +1,4 @@
-package com.example.finbuddy.Fragments.Bank;
+package com.example.finbuddy.Fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,12 +10,12 @@ import androidx.fragment.app.Fragment;
 
 import com.example.finbuddy.R;
 
-public class LoanFragment extends Fragment {
+public class EducationLoanFragment extends Fragment {
     TextView benefits,document_text;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_loan, container, false);
+        View view = inflater.inflate(R.layout.fragment_education_loan, container, false);
         benefits=view.findViewById(R.id.benefit_of_loan);
         document_text=view.findViewById(R.id.document_text);
         benefits.setText("1- Interest rate of education loans are way cheaper than personal loans and government banks provide an additional concession of 0.5% to all female students. "+

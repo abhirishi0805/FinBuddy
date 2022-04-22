@@ -1,4 +1,4 @@
-package com.example.finbuddy.Fragments.Tax;
+package com.example.finbuddy.Fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,7 +10,6 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.example.finbuddy.R;
-import com.white.progressview.HorizontalProgressView;
 
 
 public class TaxFragment extends Fragment {
