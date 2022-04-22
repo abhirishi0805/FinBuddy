@@ -5,6 +5,7 @@
       <map>
         <entry key="app/src/main/res/layout/fragment_investment.xml" value="0.28125" />
         <entry key="app/src/main/res/layout/fragment_investment_plans.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/safe_plan_layout.xml" value="0.35625" />
       </map>
     </option>
   </component>
