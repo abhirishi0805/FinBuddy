@@ -3,9 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="app/src/main/res/layout/fragment_investment.xml" value="0.28125" />
-        <entry key="app/src/main/res/layout/fragment_investment_plans.xml" value="0.35625" />
-        <entry key="app/src/main/res/layout/safe_plan_layout.xml" value="0.35625" />
+        <entry key="..\:/Zersey_Internships/jai-shree-ram/app/src/main/res/drawable/gradient.xml" value="0.145" />
+        <entry key="..\:/Zersey_Internships/jai-shree-ram/app/src/main/res/drawable/home_background_card.xml" value="0.1415" />
+        <entry key="..\:/Zersey_Internships/jai-shree-ram/app/src/main/res/font/poppins_semibold.xml" value="0.1" />
+        <entry key="..\:/Zersey_Internships/jai-shree-ram/app/src/main/res/layout/activity_main.xml" value="0.20104166666666667" />
+        <entry key="..\:/Zersey_Internships/jai-shree-ram/app/src/main/res/layout/activity_splash.xml" value="0.20104166666666667" />
+        <entry key="..\:/Zersey_Internships/jai-shree-ram/app/src/main/res/layout/fragment_home.xml" value="0.18697916666666667" />
+        <entry key="..\:/Zersey_Internships/jai-shree-ram/app/src/main/res/layout/fragment_investment.xml" value="0.20104166666666667" />
+        <entry key="..\:/Zersey_Internships/jai-shree-ram/app/src/main/res/layout/fragment_tax.xml" value="0.20104166666666667" />
+        <entry key="..\:/Zersey_Internships/jai-shree-ram/app/src/main/res/layout/home_background_card.xml" value="0.13125" />
+        <entry key="..\:/Zersey_Internships/jai-shree-ram/app/src/main/res/layout/layout_new_toolbar.xml" value="0.1" />
       </map>
     </option>
   </component>
