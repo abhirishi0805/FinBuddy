@@ -2,25 +2,24 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main_navigation"
-    app:startDestination="@id/homeScreen">
-
+    app:startDestination="@id/homeScreen2">
     <fragment
-        android:id="@+id/homeScreen"
+        android:id="@+id/homeScreen2"
         android:name="com.example.finbuddy.Fragments.HomeScreen"
         android:label="HomeScreen" >
         <action
-            android:id="@+id/action_homeScreen_to_taxFragment"
-            app:destination="@id/taxFragment" />
+            android:id="@+id/action_homeScreen2_to_taxFragment2"
+            app:destination="@id/taxFragment2" />
         <action
-            android:id="@+id/action_homeScreen_to_investmentFragment"
-            app:destination="@id/investmentFragment" />
+            android:id="@+id/action_homeScreen2_to_investmentFragment2"
+            app:destination="@id/investmentFragment2" />
     </fragment>
     <fragment
-        android:id="@+id/taxFragment"
+        android:id="@+id/taxFragment2"
         android:name="com.example.finbuddy.Fragments.TaxFragment"
         android:label="TaxFragment" />
     <fragment
-        android:id="@+id/investmentFragment"
-        android:name="com.example.finbuddy.Fragments.InvestmentFragment"
+        android:id="@+id/investmentFragment2"
+        android:name="com.example.finbuddy.Fragments.Investment.InvestmentFragment"
         android:label="InvestmentFragment" />
 </navigation>
