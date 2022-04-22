@@ -20,6 +20,6 @@
         android:label="TaxFragment" />
     <fragment
         android:id="@+id/investmentFragment2"
-        android:name="com.example.finbuddy.Fragments.Investment.InvestmentFragment"
+        android:name="com.example.finbuddy.Fragments.InvestmentFragment"
         android:label="InvestmentFragment" />
 </navigation>
