@@ -1,4 +1,4 @@
-package com.example.finbuddy.Fragments.Investment;
+package com.example.finbuddy.Fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
