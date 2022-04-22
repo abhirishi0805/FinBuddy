@@ -1,4 +1,4 @@
-package com.example.finbuddy.Fragments;
+package com.example.finbuddy.Fragments.Tax;
 
 import android.os.Bundle;
 
@@ -14,7 +14,7 @@ public class ITRFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_i_t_r, container, false);
-
+        
         return view;
     }
 }

@@ -1,4 +1,4 @@
-package com.example.finbuddy.Fragments;
+package com.example.finbuddy.Fragments.Tax;
 
 import android.os.Bundle;
 
