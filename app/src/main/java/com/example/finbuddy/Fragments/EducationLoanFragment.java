@@ -1,11 +1,16 @@
 package com.example.finbuddy.Fragments;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -26,6 +31,7 @@ public class EducationLoanFragment extends Fragment {
     Context ctx;
     LoanAdapter adapter;
     RecyclerView rV, rV1;
+    TextView tvBOI, tvSBI, tvIDBI, tvCanara;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -72,5 +78,55 @@ public class EducationLoanFragment extends Fragment {
             }
         });
         return view;
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        tvBOI = view.findViewById(R.id.tvBOI);
+        tvSBI = view.findViewById(R.id.tvSBI);
+        tvCanara = view.findViewById(R.id.tvCanara);
+        tvIDBI = view.findViewById(R.id.tvIDBI);
+
+        tvBOI.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String url = "https://www.bankofindia.co.in/EducationLoan";
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(url));
+                startActivity(i);
+            }
+        });
+
+        tvSBI.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String url = "https://sbi.co.in/web/personal-banking/loans/education-loans";
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(url));
+                startActivity(i);
+            }
+        });
+
+        tvCanara.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String url = "https://canarabank.com/User_page.aspx?othlink=391";
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(url));
+                startActivity(i);
+            }
+        });
+
+        tvIDBI.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String url = "https://www.idbibank.in/education-loan.aspx";
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(url));
+                startActivity(i);
+            }
+        });
     }
 }
