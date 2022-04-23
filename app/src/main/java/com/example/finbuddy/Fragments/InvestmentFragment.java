@@ -32,10 +32,10 @@ public class InvestmentFragment extends Fragment {
         progress_real_estate = view.findViewById(R.id.progress_real_estate);
         progress_gold = view.findViewById(R.id.progress_gold);
 
-        progress_fd.setProgressInTime(10, 1000);
-        progress_equity.setProgressInTime(80, 1200);
-        progress_mf.setProgressInTime(50, 1100);
-        progress_real_estate.setProgressInTime(20, 1000);
-        progress_gold.setProgressInTime(30, 1050);
+        progress_fd.setProgressInTime(0, 1000);
+        progress_equity.setProgressInTime(0, 1200);
+        progress_mf.setProgressInTime(0, 1100);
+        progress_real_estate.setProgressInTime(0, 1000);
+        progress_gold.setProgressInTime(0, 1050);
     }
 }
