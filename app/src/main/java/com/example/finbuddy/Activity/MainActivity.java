@@ -21,9 +21,9 @@ import com.example.finbuddy.R;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener  {
+public class MainActivity extends AppCompatActivity  implements AdapterView.OnItemSelectedListener {
 
-    private AlanButton alanButton;
+    static AlanButton alanButton;
 
 
     @Override
@@ -48,6 +48,15 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 try {
                     JSONObject command = eventCommand.getData();
                     String commandName = command.getJSONObject("data").getString("command");
+                    if(commandName.equals("Tax")){
+                        navController.navigate(R.id.action_homeScreen2_to_taxFragment2);
+                    }
+                    else if(commandName.equals("Investment")){
+                        navController.navigate(R.id.action_homeScreen2_to_investmentFragment2);
+                    }
+                    else if(commandName.equals("Loan")){
+                         navController.navigate(R.id.action_homeScreen2_to_educationLoanFragment2);
+                    }
                     Log.d("AlanButton", "onCommand: commandName: " + commandName);
                 } catch (JSONException e) {
                     Log.e("AlanButton", e.getMessage());

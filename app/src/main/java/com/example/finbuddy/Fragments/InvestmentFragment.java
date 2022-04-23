@@ -26,6 +26,8 @@ public class InvestmentFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+
+
         progress_fd = view.findViewById(R.id.progress_fd);
         progress_equity = view.findViewById(R.id.progress_equity);
         progress_mf = view.findViewById(R.id.progress_mf);

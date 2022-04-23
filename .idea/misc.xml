@@ -3,11 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/customBorder.xml" value="0.19" />
+        <entry key="app/src/main/res/drawable/customborder.xml" value="0.2075" />
+        <entry key="..\:/Zersey_Internships/jai-shree-ram/app/src/main/res/drawable/button_background.xml" value="0.1055" />
+        <entry key="..\:/Zersey_Internships/jai-shree-ram/app/src/main/res/layout/fragment_tax.xml" value="0.1527777777777778" />
         <entry key="app/src/main/res/drawable/gradient.xml" value="0.1565" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_splash.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_bank.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/fragment_education_loan.xml" value="0.35625" />
-        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_i_t_r.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/fragment_investment.xml" value="0.28125" />
         <entry key="app/src/main/res/layout/fragment_investment_plans.xml" value="0.35625" />

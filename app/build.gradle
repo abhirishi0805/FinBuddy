@@ -17,6 +17,7 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+
     buildTypes {
         release {
             minifyEnabled false
@@ -49,6 +50,7 @@ dependencies {
 
     implementation "com.airbnb.android:lottie:5.0.3"
     implementation 'com.white:progressview:1.0.1'
+    implementation 'com.tbuonomo:dotsindicator:4.2'
 
     implementation 'app.alan:sdk:4.18.0'
 
@@ -59,4 +61,6 @@ dependencies {
     def nav_version = "2.3.5"
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+
+    implementation 'com.github.AnyChart:AnyChart-Android:1.1.2'
 }
