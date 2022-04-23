@@ -54,12 +54,13 @@ public class TaxFragment extends Fragment {
         seriesData.add(new ValueDataEntry(750000, 10));
         seriesData.add(new ValueDataEntry(750001, 15));
         seriesData.add(new ValueDataEntry(1000000, 15));
-        seriesData.add(new ValueDataEntry(1000000, 20));
+        seriesData.add(new ValueDataEntry(1000001, 20));
         seriesData.add(new ValueDataEntry(1250000, 20));
         seriesData.add(new ValueDataEntry(1250001, 25));
         seriesData.add(new ValueDataEntry(1500000, 25));
-        seriesData.add(new ValueDataEntry(1500000, 30));
-        draw_graph(seriesData, "Income(Rs)", "Tax%", anyChartView1);
+        seriesData.add(new ValueDataEntry(1500001, 30));
+        seriesData.add(new ValueDataEntry(2000000, 30));
+        draw_graph(seriesData, "Income (in ₹)", "Percentage Tax", anyChartView1);
         seriesData.clear();
 
         anyChartView2 = view.findViewById(R.id.any_chart_second);
@@ -72,8 +73,9 @@ public class TaxFragment extends Fragment {
         seriesData.add(new ValueDataEntry(500001, 20));
         seriesData.add(new ValueDataEntry(1000000, 20));
         seriesData.add(new ValueDataEntry(1000001, 30));
+        seriesData.add(new ValueDataEntry(2000000, 30));
 
-        draw_graph(seriesData, "Income(Rs)", "Tax%", anyChartView2);
+        draw_graph(seriesData, "Income (in ₹)", "Percentage Tax", anyChartView2);
 
         btnTaxCalculator = view.findViewById(R.id.btnTaxCalculator);
         btnTaxCalculator.setOnClickListener(new View.OnClickListener() {
