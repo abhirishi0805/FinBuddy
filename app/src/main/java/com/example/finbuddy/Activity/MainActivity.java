@@ -8,6 +8,8 @@ import androidx.navigation.ui.NavigationUI;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 
 import com.alan.alansdk.AlanCallback;
 import com.alan.alansdk.AlanConfig;
@@ -19,7 +21,7 @@ import com.example.finbuddy.R;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener  {
 
     private AlanButton alanButton;
 
@@ -55,6 +57,16 @@ public class MainActivity extends AppCompatActivity {
 
 /// Register callbacks
         alanButton.registerCallback(alanCallback);
+
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> adapterView) {
 
     }
 }
