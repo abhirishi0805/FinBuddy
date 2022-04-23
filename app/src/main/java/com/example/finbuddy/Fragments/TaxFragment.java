@@ -147,5 +147,4 @@ public class TaxFragment extends Fragment {
         anyChartView.setChart(area3d);
     }
 
-
 }
