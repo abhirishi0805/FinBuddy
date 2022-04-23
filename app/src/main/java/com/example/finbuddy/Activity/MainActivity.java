@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
     private AlanButton alanButton;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
