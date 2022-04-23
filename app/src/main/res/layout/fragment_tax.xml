@@ -1,53 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
 
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:paddingBottom="10dp"
         android:layout_height="match_parent"
-        >
+        android:paddingBottom="10dp">
 
 
         <com.google.android.material.appbar.AppBarLayout
-            android:layout_width="match_parent"
             android:id="@+id/toolbar3"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
-                android:background="@color/background_white"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:background="@color/background_white">
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:text="Tax"
+                    android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_marginStart="10dp"
+                    android:text="Tax"
                     android:textSize="25sp"
-                    android:textStyle="bold"
-                    android:layout_height="wrap_content">
+                    android:textStyle="bold">
 
                 </TextView>
 
             </androidx.appcompat.widget.Toolbar>
 
 
-
         </com.google.android.material.appbar.AppBarLayout>
-
 
 
         <TextView
             android:id="@+id/old_text_regime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20sp"
             android:layout_below="@+id/toolbar3"
+            android:layout_marginStart="20sp"
             android:layout_marginTop="15sp"
             android:text="New Tax Regime"
             android:textColor="@color/black"
@@ -56,20 +53,19 @@
 
 
         <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            app:cardCornerRadius="20sp"
             android:id="@+id/new_tax_regime_graph"
-            android:layout_marginTop="20sp"
-            android:layout_marginStart="25sp"
-            android:layout_marginEnd="25sp"
+            android:layout_width="match_parent"
+            android:layout_height="250sp"
             android:layout_below="@+id/old_text_regime"
-            android:layout_height="190sp">
+            android:layout_marginStart="25sp"
+            android:layout_marginTop="20sp"
+            android:layout_marginEnd="25sp"
+            app:cardCornerRadius="20sp">
 
             <com.anychart.AnyChartView
-                android:layout_width="match_parent"
                 android:id="@+id/any_chart"
-                android:layout_height="match_parent">
-            </com.anychart.AnyChartView>
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></com.anychart.AnyChartView>
 
         </androidx.cardview.widget.CardView>
 
@@ -78,9 +74,9 @@
             android:id="@+id/new_text_regime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20sp"
             android:layout_below="@+id/new_tax_regime_graph"
-            android:layout_marginTop="15sp"
+            android:layout_marginStart="20sp"
+            android:layout_marginTop="25sp"
             android:text="Old Tax Regime"
             android:textColor="@color/black"
             android:textSize="19sp"
@@ -88,39 +84,38 @@
 
 
         <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            app:cardCornerRadius="20sp"
-            android:layout_marginBottom="10dp"
             android:id="@+id/new_tax_regime"
-            android:layout_marginTop="20sp"
-            android:layout_marginStart="25sp"
-            android:layout_marginEnd="25sp"
+            android:layout_width="match_parent"
+            android:layout_height="250sp"
             android:layout_below="@+id/new_text_regime"
-            android:layout_height="190sp">
+            android:layout_marginStart="25sp"
+            android:layout_marginTop="20sp"
+            android:layout_marginEnd="25sp"
+            android:layout_marginBottom="10dp"
+            app:cardCornerRadius="20sp">
 
             <com.anychart.AnyChartView
-                android:layout_width="match_parent"
                 android:id="@+id/any_chart_second"
-                android:layout_height="match_parent">
-            </com.anychart.AnyChartView>
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></com.anychart.AnyChartView>
 
         </androidx.cardview.widget.CardView>
 
 
-
         <TextView
+            android:id="@+id/btnTaxCalculator"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/new_tax_regime"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/button_background"
+            android:gravity="center"
+            android:padding="15dp"
             android:text="Tax Calculator"
             android:textColor="@color/white"
             android:textSize="15sp"
-            android:textStyle="bold"
-            android:padding="15dp"
-            android:background="@drawable/button_background"
-            android:gravity="center"
-            android:layout_marginTop="50dp"
-           android:layout_below="@+id/new_tax_regime"
-            android:layout_centerHorizontal="true">
+            android:textStyle="bold">
 
         </TextView>
 

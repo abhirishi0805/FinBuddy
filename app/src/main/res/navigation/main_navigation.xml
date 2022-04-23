@@ -6,7 +6,7 @@
     <fragment
         android:id="@+id/homeScreen2"
         android:name="com.example.finbuddy.Fragments.HomeScreen"
-        android:label="HomeScreen" >
+        android:label="HomeScreen">
         <action
             android:id="@+id/action_homeScreen2_to_taxFragment2"
             app:destination="@id/taxFragment2" />
@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_homeScreen2_to_educationLoanFragment2"
             app:destination="@id/educationLoanFragment2" />
+        <action
+            android:id="@+id/action_taxFragment2_to_taxCalculatorFragment2"
+            app:destination="@id/taxCalculatorFragment2" />
     </fragment>
     <fragment
         android:id="@+id/taxFragment2"
@@ -29,4 +32,8 @@
         android:id="@+id/educationLoanFragment2"
         android:name="com.example.finbuddy.Fragments.EducationLoanFragment"
         android:label="EducationLoanFragment" />
+    <fragment
+        android:id="@+id/taxCalculatorFragment2"
+        android:name="com.example.finbuddy.Fragments.TaxCalculatorFragment"
+        android:label="TaxCalculatorFragment" />
 </navigation>
