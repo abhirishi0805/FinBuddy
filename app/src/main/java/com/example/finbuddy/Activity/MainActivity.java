@@ -21,7 +21,7 @@ import org.json.JSONObject;
 
 public class MainActivity extends AppCompatActivity {
 
-    private AlanButton alanButton;
+    static AlanButton alanButton;
 
 
     @Override
@@ -46,6 +46,15 @@ public class MainActivity extends AppCompatActivity {
                 try {
                     JSONObject command = eventCommand.getData();
                     String commandName = command.getJSONObject("data").getString("command");
+                    if(commandName.equals("Tax")){
+                        navController.navigate(R.id.action_homeScreen2_to_taxFragment2);
+                    }
+                    else if(commandName.equals("Investment")){
+                        navController.navigate(R.id.action_homeScreen2_to_investmentFragment2);
+                    }
+                    else if(commandName.equals("Loan")){
+                         navController.navigate(R.id.action_homeScreen2_to_educationLoanFragment);
+                    }
                     Log.d("AlanButton", "onCommand: commandName: " + commandName);
                 } catch (JSONException e) {
                     Log.e("AlanButton", e.getMessage());
