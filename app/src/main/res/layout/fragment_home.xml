@@ -33,14 +33,39 @@
             android:layout_height="250dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="100dp"
-            android:layout_marginEnd="10dp">
+            android:layout_marginEnd="10dp"
+            app:cardCornerRadius="2dp">
 
-            <androidx.viewpager2.widget.ViewPager2
-                android:id="@+id/view_pager2"
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_centerHorizontal="true"
-                android:background="#FAF6F6" />
+                android:background="@drawable/customborder">
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/view_pager2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:background="#FAF6F6"
+                    android:paddingBottom="10dp" />
+
+                <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+                    android:id="@+id/dots_indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    app:dotsColor="@color/white"
+                    app:dotsCornerRadius="8dp"
+                    app:dotsSize="16dp"
+                    app:dotsSpacing="4dp"
+                    app:dotsWidthFactor="2.5"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:progressMode="true"
+                    app:selectedDotColor="@color/blue" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.cardview.widget.CardView>
 
@@ -51,13 +76,22 @@
             android:layout_marginTop="20dp"
             android:orientation="vertical">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:text="Domains :"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/card_tax"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="35dp"
-                android:layout_marginTop="30dp"
-                app:cardBackgroundColor="#FAF6F6"
+                android:layout_marginTop="20dp"
+                app:cardBackgroundColor="#F6F8FA"
                 app:cardCornerRadius="10dp">
 
                 <LinearLayout
@@ -90,7 +124,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="35dp"
                 android:layout_marginTop="20dp"
-                app:cardBackgroundColor="#FAF6F6"
+                app:cardBackgroundColor="#F6F8FA"
                 app:cardCornerRadius="10dp">
 
                 <LinearLayout
@@ -127,7 +161,7 @@
                 android:layout_marginHorizontal="35dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="30dp"
-                app:cardBackgroundColor="#FAF6F6"
+                app:cardBackgroundColor="#F6F8FA"
                 app:cardCornerRadius="10dp">
 
                 <LinearLayout

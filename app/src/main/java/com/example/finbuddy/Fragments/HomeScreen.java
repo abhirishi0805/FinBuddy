@@ -18,6 +18,7 @@ import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.finbuddy.R;
 import com.example.finbuddy.adapter.sliderAdapter;
+import com.tbuonomo.viewpagerdotsindicator.DotsIndicator;
 
 import java.util.ArrayList;
 
@@ -26,6 +27,7 @@ public class HomeScreen extends Fragment {
 
     CardView card_tax, card_investment, card_education_loan;
     ViewPager2 viewPager2;
+    DotsIndicator dotsIndicator;
 
     CountDownTimer timer;
     int bannerIndex;
@@ -49,6 +51,7 @@ public class HomeScreen extends Fragment {
         card_investment = view.findViewById(R.id.card_investment);
         card_education_loan = view.findViewById(R.id.card_education_loan);
         viewPager2 = view.findViewById(R.id.view_pager2);
+        dotsIndicator = view.findViewById(R.id.dots_indicator);
 
         NavController navController = Navigation.findNavController(view);
 
@@ -72,7 +75,7 @@ public class HomeScreen extends Fragment {
             @Override
             public void onClick(View view) {
                 timer.cancel();
-                navController.navigate(R.id.action_homeScreen2_to_investmentFragment2);
+                navController.navigate(R.id.action_homeScreen2_to_educationLoanFragment2);
             }
         });
 
@@ -84,6 +87,8 @@ public class HomeScreen extends Fragment {
         bannerIndex = 0;
         sliderAdapter adapter = new sliderAdapter(getContext(), arr, viewPager2);
         viewPager2.setAdapter(adapter);
+
+        dotsIndicator.setViewPager2(viewPager2);
 
         timer = new CountDownTimer(2000, 2000) {
             public void onTick(long millisUntilFinished) {
