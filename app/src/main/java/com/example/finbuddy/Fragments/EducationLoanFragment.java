@@ -75,7 +75,7 @@ public class EducationLoanFragment extends Fragment {
                     for(int i=0;i<c.size();i++){
                         String s=String.valueOf(i);
                         String a=String.valueOf(i+1);
-                        l.add(a+"- "+(String) c.get(s));
+                        l.add("• " + (String) c.get(s));
                     }
                     adapter = new LoanAdapter(l,ctx);
                     rV.setAdapter(adapter);
@@ -91,8 +91,7 @@ public class EducationLoanFragment extends Fragment {
                     for(int i=0;i<c.size();i++){
                         String s=String.valueOf(i);
                         String a=String.valueOf(i+1);
-                        l1.add(a+"- "+(String) c.get(s));
-                    }
+                        l1.add("• " + (String) c.get(s));                    }
                     adapter = new LoanAdapter(l1,ctx);
                     rV1.setAdapter(adapter);
                     mainlinear.setVisibility(View.VISIBLE);
