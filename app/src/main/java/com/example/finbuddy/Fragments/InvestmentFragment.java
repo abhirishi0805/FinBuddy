@@ -1,6 +1,7 @@
 package com.example.finbuddy.Fragments;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,9 +9,18 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 
+import com.alan.alansdk.AlanCallback;
+import com.alan.alansdk.button.AlanButton;
+import com.alan.alansdk.events.EventCommand;
+import com.example.finbuddy.Activity.MainActivity;
 import com.example.finbuddy.R;
 import com.white.progressview.HorizontalProgressView;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class InvestmentFragment extends Fragment {
 
@@ -39,5 +49,31 @@ public class InvestmentFragment extends Fragment {
         progress_mf.setProgressInTime(0, 1100);
         progress_real_estate.setProgressInTime(0, 1000);
         progress_gold.setProgressInTime(0, 1050);
+
+
+        NavController navController = Navigation.findNavController(view);
+
+
+        AlanButton alanButton =  ((MainActivity)getActivity()).alanButton;
+
+        AlanCallback alanCallback = new AlanCallback() {
+            /// Handle commands from Alan Studio
+            @Override
+            public void onCommand(final EventCommand eventCommand) {
+                try {
+                    JSONObject command = eventCommand.getData();
+                    String commandName = command.getJSONObject("data").getString("command");
+                    if(commandName.equals("return home")){
+                        navController.navigateUp();
+                    }
+                    Log.d("AlanButton", "onCommand: commandName: " + commandName);
+                } catch (JSONException e) {
+                    Log.e("AlanButton", e.getMessage());
+                }
+            }
+        };
+
+/// Register callbacks
+        alanButton.registerCallback(alanCallback);
     }
 }

@@ -1,6 +1,7 @@
 package com.example.finbuddy.Fragments;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,8 +10,12 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
+import com.alan.alansdk.AlanCallback;
+import com.alan.alansdk.button.AlanButton;
+import com.alan.alansdk.events.EventCommand;
 import com.anychart.APIlib;
 import com.anychart.AnyChart;
 import com.anychart.AnyChartView;
@@ -20,7 +25,11 @@ import com.anychart.charts.Cartesian3d;
 import com.anychart.core.cartesian.series.Area3d;
 import com.anychart.data.Mapping;
 import com.anychart.data.Set;
+import com.example.finbuddy.Activity.MainActivity;
 import com.example.finbuddy.R;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 
@@ -30,6 +39,8 @@ public class TaxFragment extends Fragment {
 
     AnyChartView anyChartView1;
     AnyChartView anyChartView2;
+
+
 
 
     @Nullable
@@ -45,6 +56,8 @@ public class TaxFragment extends Fragment {
         anyChartView1 = view.findViewById(R.id.any_chart);
         APIlib.getInstance().setActiveAnyChartView(anyChartView1);
         ArrayList<DataEntry> seriesData = new ArrayList<>();
+
+        NavController navController = Navigation.findNavController(view);
 
         seriesData.add(new ValueDataEntry(0, 0));
         seriesData.add(new ValueDataEntry(250000, 0));
@@ -77,6 +90,7 @@ public class TaxFragment extends Fragment {
 
         draw_graph(seriesData, "Income (in ₹)", "Percentage Tax", anyChartView2);
 
+
         btnTaxCalculator = view.findViewById(R.id.btnTaxCalculator);
         btnTaxCalculator.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -84,6 +98,31 @@ public class TaxFragment extends Fragment {
                 Navigation.findNavController(view).navigate(R.id.action_taxFragment2_to_taxCalculatorFragment2);
             }
         });
+
+
+       AlanButton alanButton =  ((MainActivity)getActivity()).alanButton;
+
+        AlanCallback alanCallback = new AlanCallback() {
+            /// Handle commands from Alan Studio
+            @Override
+            public void onCommand(final EventCommand eventCommand) {
+                try {
+                    JSONObject command = eventCommand.getData();
+                    String commandName = command.getJSONObject("data").getString("command");
+                     if(commandName.equals("return home")){
+                         navController.navigateUp();
+                     }
+                    Log.d("AlanButton", "onCommand: commandName: " + commandName);
+                } catch (JSONException e) {
+                    Log.e("AlanButton", e.getMessage());
+                }
+            }
+        };
+
+/// Register callbacks
+        alanButton.registerCallback(alanCallback);
+
+
     }
 
 

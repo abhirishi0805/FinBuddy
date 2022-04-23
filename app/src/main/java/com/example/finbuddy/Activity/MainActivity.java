@@ -23,7 +23,7 @@ import org.json.JSONObject;
 
 public class MainActivity extends AppCompatActivity  implements AdapterView.OnItemSelectedListener {
 
-    static AlanButton alanButton;
+    public AlanButton alanButton;
 
 
     @Override
