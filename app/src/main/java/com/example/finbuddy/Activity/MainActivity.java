@@ -8,6 +8,8 @@ import androidx.navigation.ui.NavigationUI;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 
 import com.alan.alansdk.AlanCallback;
 import com.alan.alansdk.AlanConfig;
@@ -19,7 +21,7 @@ import com.example.finbuddy.R;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity  implements AdapterView.OnItemSelectedListener {
 
     static AlanButton alanButton;
 
@@ -53,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
                         navController.navigate(R.id.action_homeScreen2_to_investmentFragment2);
                     }
                     else if(commandName.equals("Loan")){
-                         navController.navigate(R.id.action_homeScreen2_to_educationLoanFragment);
+                         navController.navigate(R.id.action_homeScreen2_to_educationLoanFragment2);
                     }
                     Log.d("AlanButton", "onCommand: commandName: " + commandName);
                 } catch (JSONException e) {
@@ -64,6 +66,16 @@ public class MainActivity extends AppCompatActivity {
 
 /// Register callbacks
         alanButton.registerCallback(alanCallback);
+
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> adapterView) {
 
     }
 }

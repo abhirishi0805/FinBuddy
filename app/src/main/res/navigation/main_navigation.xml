@@ -16,14 +16,17 @@
         <action
             android:id="@+id/action_homeScreen2_to_educationLoanFragment2"
             app:destination="@id/educationLoanFragment2" />
-        <action
-            android:id="@+id/action_taxFragment2_to_taxCalculatorFragment2"
-            app:destination="@id/taxCalculatorFragment2" />
+
     </fragment>
     <fragment
         android:id="@+id/taxFragment2"
         android:name="com.example.finbuddy.Fragments.TaxFragment"
-        android:label="TaxFragment" />
+        android:label="TaxFragment" >
+
+        <action
+            android:id="@+id/action_taxFragment2_to_taxCalculatorFragment2"
+            app:destination="@id/taxCalculatorFragment2" />
+    </fragment>
     <fragment
         android:id="@+id/investmentFragment2"
         android:name="com.example.finbuddy.Fragments.InvestmentFragment"

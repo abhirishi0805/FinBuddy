@@ -1,6 +1,7 @@
 package com.example.finbuddy.Fragments;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -20,13 +22,13 @@ import com.example.finbuddy.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TaxCalculatorFragment extends Fragment implements AdapterView.OnItemSelectedListener {
+public class TaxCalculatorFragment extends Fragment{
     Spinner taxType;
     EditText amount;
     Button calculate_tax;
     TextView tax_amount, net_salary;
     String item = "New Regime";
-    int totalAmount;
+    int totalAmount=0;
 
     @Nullable
     @Override
@@ -39,16 +41,24 @@ public class TaxCalculatorFragment extends Fragment implements AdapterView.OnIte
         super.onViewCreated(view, savedInstanceState);
 
         taxType = view.findViewById(R.id.taxType);
-        taxType.setOnItemClickListener((AdapterView.OnItemClickListener) this);
         List<String> categories = new ArrayList<String>();
         categories.add("New Regime");
         categories.add("Old Regime");
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, categories);
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         taxType.setAdapter(dataAdapter);
+        taxType.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                item = adapterView.getItemAtPosition(i).toString();
+            }
 
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
         amount = view.findViewById(R.id.amount);
-        totalAmount = Integer.parseInt(amount.getText().toString());
 
         calculate_tax = view.findViewById(R.id.calculate_tax);
         tax_amount = view.findViewById(R.id.tax_amount);
@@ -61,17 +71,14 @@ public class TaxCalculatorFragment extends Fragment implements AdapterView.OnIte
         });
     }
 
-    @Override
-    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        item = parent.getItemAtPosition(position).toString();
-    }
-
-    @Override
-    public void onNothingSelected(AdapterView<?> parent) {
-
-    }
-
     public void calculate() {
+        if (!amount.getText().toString().equals("")) {
+            totalAmount = Integer.parseInt(amount.getText().toString());
+        }
+        else{
+            Toast.makeText(getActivity(),"Please enter the amount!",Toast.LENGTH_SHORT).show();
+            return ;
+        }
         double tax = 0;
         if (item.equals("New Regime")) {
             if (totalAmount <= 250000)
@@ -125,7 +132,7 @@ public class TaxCalculatorFragment extends Fragment implements AdapterView.OnIte
                 tax += y;
             }
         }
-        tax_amount.setText(String.format("Tax = ₹%,.2f", (totalAmount - tax)));
+        tax_amount.setText(String.format("Tax = ₹%,.2f", (tax)));
         net_salary.setText(String.format("Net Salary = ₹%,.2f", (totalAmount - tax)));
     }
 }
