@@ -12,29 +12,28 @@
 
 
         <com.google.android.material.appbar.AppBarLayout
-            android:layout_width="match_parent"
             android:id="@+id/toolbar3"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
-                android:background="@color/background_white"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:background="@color/background_white">
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:text="Investment"
+                    android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_marginStart="10dp"
+                    android:text="Investment"
                     android:textSize="25sp"
-                    android:textStyle="bold"
-                    android:layout_height="wrap_content">
+                    android:textStyle="bold">
 
                 </TextView>
 
             </androidx.appcompat.widget.Toolbar>
-
 
 
         </com.google.android.material.appbar.AppBarLayout>
@@ -43,8 +42,8 @@
         <com.airbnb.lottie.LottieAnimationView
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            app:lottie_autoPlay="true"
             android:layout_marginTop="10dp"
+            app:lottie_autoPlay="true"
             app:lottie_loop="true"
             app:lottie_rawRes="@raw/investment" />
 
@@ -321,9 +320,23 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="15dp"
             android:layout_marginTop="20dp"
-            android:layout_marginBottom="30dp"
+            android:layout_marginBottom="25dp"
             android:text="Note : Annual Inflation Rate (rate at which price increases) is around 6%."
             android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/btnTaxCalculator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/button_background"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="SIP Calculator"
+            android:textColor="@color/white"
+            android:textSize="15sp"
             android:textStyle="bold" />
 
     </LinearLayout>

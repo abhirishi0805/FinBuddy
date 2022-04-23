@@ -100,24 +100,84 @@
 
         </androidx.cardview.widget.CardView>
 
+        <LinearLayout
+            android:id="@+id/llSaveTax"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/new_tax_regime"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20sp"
+                android:layout_marginTop="25sp"
+                android:text="Save some TAX - "
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="15dp"
+                android:drawableLeft="@drawable/play_arrow"
+                android:drawablePadding="5dp"
+                android:text="Old Tax Regime saves tax on LIC, EPF, FD, PPF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="8dp"
+                android:drawableLeft="@drawable/play_arrow"
+                android:drawablePadding="5dp"
+                android:text="Salaried individuals get benefits on rent and education allowance"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="8dp"
+                android:drawableLeft="@drawable/play_arrow"
+                android:drawablePadding="5dp"
+                android:text="Health Insurance Money is exempted from taxation"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="8dp"
+                android:drawableLeft="@drawable/play_arrow"
+                android:drawablePadding="5dp"
+                android:text="Charity can be claimed for exemption"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
 
         <TextView
             android:id="@+id/btnTaxCalculator"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/new_tax_regime"
+            android:layout_below="@+id/llSaveTax"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="30dp"
             android:background="@drawable/button_background"
             android:gravity="center"
             android:padding="15dp"
             android:text="Tax Calculator"
             android:textColor="@color/white"
             android:textSize="15sp"
-            android:textStyle="bold">
-
-        </TextView>
-
+            android:textStyle="bold"/>
 
     </RelativeLayout>
 

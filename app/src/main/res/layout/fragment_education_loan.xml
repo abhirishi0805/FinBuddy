@@ -2,35 +2,73 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:layout_margin="5dp"
-            android:textColor="@color/black"
-            android:text="Benefits of Student education loan:-"/>
 
-       <androidx.recyclerview.widget.RecyclerView
-           android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-           android:id="@+id/recycler_view"
-           android:layout_margin="5dp"/>
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/toolbar3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background_white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:text="Education Loan"
+                    android:textSize="25sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:layout_margin="5dp"
-            android:textColor="@color/black"
-            android:text="Documents required for loan"/>
+            android:layout_marginTop="15dp"
+            android:drawableLeft="@drawable/play_arrow"
+            android:drawablePadding="5dp"
+            android:text="Why Education Loan ?"
+            android:textSize="22sp"
+            android:textStyle="bold" />
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="5dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:drawableLeft="@drawable/play_arrow"
+            android:drawablePadding="5dp"
+            android:text="Documents Required"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_view1"
-            android:layout_margin="5dp"/>
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="5dp" />
     </LinearLayout>
 </ScrollView>

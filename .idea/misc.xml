@@ -5,8 +5,6 @@
       <map>
         <entry key="app/src/main/res/drawable/customBorder.xml" value="0.19" />
         <entry key="app/src/main/res/drawable/customborder.xml" value="0.2075" />
-        <entry key="..\:/Zersey_Internships/jai-shree-ram/app/src/main/res/drawable/button_background.xml" value="0.1055" />
-        <entry key="..\:/Zersey_Internships/jai-shree-ram/app/src/main/res/layout/fragment_tax.xml" value="0.1527777777777778" />
         <entry key="app/src/main/res/drawable/gradient.xml" value="0.1565" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.33" />
@@ -21,11 +19,13 @@
         <entry key="app/src/main/res/layout/fragment_tax.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/fragment_tax_calculator.xml" value="0.33" />
         <entry key="app/src/main/res/layout/layout_new_toolbar.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/listviewtext.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/safe_plan_layout.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/single_view_pager.xml" value="0.35625" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
