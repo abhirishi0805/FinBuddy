@@ -24,10 +24,8 @@ import java.util.ArrayList;
 
 public class HomeScreen extends Fragment {
 
-
     RelativeLayout tax_fragment , investment_fragment;
     ViewPager2 viewPager2;
-
 
     @Nullable
     @Override
@@ -53,9 +51,9 @@ public class HomeScreen extends Fragment {
 
 
          ArrayList<Integer> arr =  new ArrayList<Integer>();
-         arr.add(R.drawable.phto_one);
+         arr.add(R.drawable.photo_one);
+         arr.add(R.drawable.photo_three);
          arr.add(R.drawable.photo_two);
-         arr.add(R.drawable.phtoto_three);
 
         sliderAdapter adapter  = new sliderAdapter(getContext(), arr , viewPager2 );
         viewPager2.setAdapter(adapter);
