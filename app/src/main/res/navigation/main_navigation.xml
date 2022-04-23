@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_homeScreen2_to_investmentFragment2"
             app:destination="@id/investmentFragment2" />
+        <action
+            android:id="@+id/action_homeScreen2_to_educationLoanFragment2"
+            app:destination="@id/educationLoanFragment2" />
     </fragment>
     <fragment
         android:id="@+id/taxFragment2"
@@ -22,4 +25,8 @@
         android:id="@+id/investmentFragment2"
         android:name="com.example.finbuddy.Fragments.InvestmentFragment"
         android:label="InvestmentFragment" />
+    <fragment
+        android:id="@+id/educationLoanFragment2"
+        android:name="com.example.finbuddy.Fragments.EducationLoanFragment"
+        android:label="EducationLoanFragment" />
 </navigation>

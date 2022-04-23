@@ -13,7 +13,7 @@
         app:lottie_autoPlay="true"
         app:lottie_loop="false"
         app:lottie_speed="1.5"
-        app:lottie_rawRes="@raw/splash_screen"
+        app:lottie_rawRes="@raw/home_investment"
         android:layout_marginHorizontal="30dp"/>
 
 </LinearLayout>
