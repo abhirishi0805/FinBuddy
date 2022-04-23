@@ -1,11 +1,11 @@
 package com.example.finbuddy.Fragments;
 
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
-import android.widget.RelativeLayout;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -15,7 +15,6 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.viewpager2.widget.ViewPager2;
-
 
 import com.example.finbuddy.R;
 import com.example.finbuddy.adapter.sliderAdapter;
@@ -27,6 +26,9 @@ public class HomeScreen extends Fragment {
 
     CardView card_tax, card_investment, card_education_loan;
     ViewPager2 viewPager2;
+
+    CountDownTimer timer;
+    int bannerIndex;
 
     @Nullable
     @Override
@@ -50,18 +52,10 @@ public class HomeScreen extends Fragment {
 
         NavController navController = Navigation.findNavController(view);
 
-
-         ArrayList<Integer> arr =  new ArrayList<Integer>();
-         arr.add(R.drawable.photo_one);
-         arr.add(R.drawable.photo_three);
-         arr.add(R.drawable.photo_two);
-
-        sliderAdapter adapter  = new sliderAdapter(getContext(), arr , viewPager2 );
-        viewPager2.setAdapter(adapter);
-
         card_tax.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                timer.cancel();
                 navController.navigate(R.id.action_homeScreen2_to_taxFragment2);
             }
         });
@@ -69,6 +63,7 @@ public class HomeScreen extends Fragment {
         card_investment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                timer.cancel();
                 navController.navigate(R.id.action_homeScreen2_to_investmentFragment2);
             }
         });
@@ -76,8 +71,36 @@ public class HomeScreen extends Fragment {
         card_education_loan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                timer.cancel();
                 navController.navigate(R.id.action_homeScreen2_to_investmentFragment2);
             }
         });
+
+        ArrayList<Integer> arr = new ArrayList<Integer>();
+        arr.add(R.drawable.photo_one);
+        arr.add(R.drawable.photo_three);
+        arr.add(R.drawable.photo_two);
+
+        bannerIndex = 0;
+        sliderAdapter adapter = new sliderAdapter(getContext(), arr, viewPager2);
+        viewPager2.setAdapter(adapter);
+
+        timer = new CountDownTimer(2000, 2000) {
+            public void onTick(long millisUntilFinished) {
+            }
+
+            public void onFinish() {
+                bannerIndex = ++bannerIndex % 3;
+                viewPager2.setCurrentItem(bannerIndex);
+                adapter.notifyDataSetChanged();
+                startBannerChangeTimer();
+            }
+        };
+
+        startBannerChangeTimer();
+    }
+
+    void startBannerChangeTimer() {
+        timer.start();
     }
 }
