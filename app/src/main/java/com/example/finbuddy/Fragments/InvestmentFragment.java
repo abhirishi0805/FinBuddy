@@ -4,10 +4,12 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import com.example.finbuddy.R;
 import com.white.progressview.HorizontalProgressView;
@@ -15,6 +17,7 @@ import com.white.progressview.HorizontalProgressView;
 public class InvestmentFragment extends Fragment {
 
     HorizontalProgressView progress_fd, progress_equity, progress_mf, progress_real_estate, progress_gold;
+    TextView btnSIPCalculator;
 
     @Nullable
     @Override
@@ -25,8 +28,6 @@ public class InvestmentFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
-
 
         progress_fd = view.findViewById(R.id.progress_fd);
         progress_equity = view.findViewById(R.id.progress_equity);
@@ -39,5 +40,13 @@ public class InvestmentFragment extends Fragment {
         progress_mf.setProgressInTime(0, 1100);
         progress_real_estate.setProgressInTime(0, 1000);
         progress_gold.setProgressInTime(0, 1050);
+
+        btnSIPCalculator = view.findViewById(R.id.btnSIPCalculator);
+        btnSIPCalculator.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.action_investmentFragment2_to_SIPCalculatorFragment2);
+            }
+        });
     }
 }

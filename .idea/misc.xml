@@ -8,6 +8,7 @@
         <entry key="app/src/main/res/drawable/gradient.xml" value="0.1565" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/frag_sip.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/fragment_bank.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/fragment_education_loan.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.33" />
@@ -16,6 +17,7 @@
         <entry key="app/src/main/res/layout/fragment_investment_plans.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/fragment_loan.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/fragment_save_tax.xml" value="0.3411458333333333" />
+        <entry key="app/src/main/res/layout/fragment_sip_calculator.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/fragment_tax.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/fragment_tax_calculator.xml" value="0.33" />
         <entry key="app/src/main/res/layout/layout_new_toolbar.xml" value="0.35625" />

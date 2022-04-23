@@ -326,7 +326,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/btnTaxCalculator"
+            android:id="@+id/btnSIPCalculator"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
