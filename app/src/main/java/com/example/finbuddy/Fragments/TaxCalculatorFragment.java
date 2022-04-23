@@ -132,7 +132,8 @@ public class TaxCalculatorFragment extends Fragment{
                 tax += y;
             }
         }
-        tax_amount.setText(String.format("Tax = ₹%,.2f", (tax)));
-        net_salary.setText(String.format("Net Salary = ₹%,.2f", (totalAmount - tax)));
+        double s=tax*((double)104/(double)100);
+        tax_amount.setText(String.format("Tax = ₹%,.2f", (tax+s)));
+        net_salary.setText(String.format("Net Salary = ₹%,.2f", (totalAmount - (tax+s))));
     }
 }
