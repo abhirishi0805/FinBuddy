@@ -13,13 +13,12 @@
             android:layout_margin="5dp"
             android:textColor="@color/black"
             android:text="Benefits of Student education loan:-"/>
-        <TextView
-            android:layout_margin="5dp"
+
+        <ListView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:id="@+id/benefit_of_loan"
-            android:text="Bhut benifits hota hai"/>
+            android:layout_margin="5dp"
+            android:id="@+id/benefit_of_loan"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -27,12 +26,11 @@
             android:layout_margin="5dp"
             android:textColor="@color/black"
             android:text="Documents required for loan"/>
-        <TextView
+
+        <ListView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="documents"
             android:layout_margin="5dp"
-            android:textSize="20dp"
             android:id="@+id/document_text"/>
     </LinearLayout>
 </ScrollView>
