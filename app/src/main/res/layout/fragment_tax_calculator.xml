@@ -46,29 +46,29 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:hint="Your Salary"
-                android:textSize="20dp"
-                android:inputType="number"/>
+                android:inputType="number"
+                android:textSize="20dp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Calculate your tax and net salary"
-                android:textStyle="bold"
-                android:layout_marginTop="10dp"
                 android:layout_gravity="center_horizontal"
-                android:textColor="#8C9091"/>
+                android:layout_marginTop="10dp"
+                android:text="Calculate your tax and net salary"
+                android:textColor="#8C9091"
+                android:textStyle="bold" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/calculate_tax"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="14dp"
                 android:backgroundTint="#73CC8C"
+                android:paddingHorizontal="30dp"
+                android:paddingVertical="10dp"
                 android:text="Calculate"
                 android:textAllCaps="false"
-                android:layout_marginTop="6dp"
-                android:paddingVertical="10dp"
-                android:paddingHorizontal="30dp"
-                android:layout_gravity="center_horizontal"
                 android:textSize="15sp"
                 app:cornerRadius="18dp" />
 
@@ -76,19 +76,20 @@
                 android:id="@+id/tax_amount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 android:layout_gravity="center_horizontal"
-                tools:text="Tax = ₹25000"
-                android:textSize="20dp" />
+                android:layout_marginTop="10dp"
+                android:textSize="20dp"
+                tools:text="Tax = ₹25000" />
 
             <TextView
                 android:id="@+id/net_salary"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 android:layout_gravity="center_horizontal"
-                tools:text="Net Salary = ₹505000"
-                android:textSize="20dp" />
+                android:layout_marginTop="10dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                tools:text="Net Salary = ₹505000" />
 
         </LinearLayout>
 
