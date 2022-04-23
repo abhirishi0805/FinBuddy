@@ -166,7 +166,7 @@
             android:layout_marginTop="20dp"
             android:drawableLeft="@drawable/play_arrow"
             android:drawablePadding="5dp"
-            android:text="Mutual Fund"
+            android:text="Mutual Fund  (SIP)"
             android:textSize="21sp"
             android:textStyle="bold" />
 
