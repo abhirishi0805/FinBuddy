@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+<EditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Enter the amount you invest"
+    android:inputType="number"
+    android:layout_margin="5dp"
+    android:id="@+id/basic_amount"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:hint="duration in months"
+        android:id="@+id/duration"
+        android:inputType="number"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:hint="periodic rate of interest"
+        android:inputType="numberDecimal"
+        android:id="@+id/interest_rate"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate SIP"
+        android:layout_gravity="center_horizontal"
+        android:backgroundTint="@color/black"
+        android:id="@+id/calculate_sip"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sip_tax"
+        android:layout_margin="5dp"/>
+</LinearLayout>

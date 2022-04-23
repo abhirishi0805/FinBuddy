@@ -20,7 +20,7 @@
     </fragment>
     <fragment
         android:id="@+id/taxFragment2"
-        android:name="com.example.finbuddy.Fragments.TaxFragment"
+        android:name="com.example.finbuddy.Fragments.SIPCalculatorFragment"
         android:label="TaxFragment" >
 
         <action
