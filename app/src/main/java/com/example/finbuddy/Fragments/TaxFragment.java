@@ -5,6 +5,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -39,6 +41,8 @@ public class TaxFragment extends Fragment {
 
     AnyChartView anyChartView1;
     AnyChartView anyChartView2;
+    RelativeLayout main_relative;
+    ProgressBar progressBar;
 
 
 
@@ -56,6 +60,13 @@ public class TaxFragment extends Fragment {
         anyChartView1 = view.findViewById(R.id.any_chart);
         APIlib.getInstance().setActiveAnyChartView(anyChartView1);
         ArrayList<DataEntry> seriesData = new ArrayList<>();
+
+        main_relative = view.findViewById(R.id.main_relative);
+        progressBar = view.findViewById(R.id.progress_bar);
+        main_relative.setVisibility(View.GONE);
+        progressBar.setVisibility(View.VISIBLE);
+
+
 
         NavController navController = Navigation.findNavController(view);
 
@@ -89,6 +100,10 @@ public class TaxFragment extends Fragment {
         seriesData.add(new ValueDataEntry(2000000, 30));
 
         draw_graph(seriesData, "Income (in ₹)", "Percentage Tax", anyChartView2);
+
+
+        main_relative.setVisibility(View.VISIBLE);
+        progressBar.setVisibility(View.GONE);
 
 
         btnTaxCalculator = view.findViewById(R.id.btnTaxCalculator);

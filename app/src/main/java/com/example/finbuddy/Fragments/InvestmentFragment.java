@@ -21,6 +21,9 @@ import com.example.finbuddy.Activity.MainActivity;
 import com.example.finbuddy.R;
 import com.white.progressview.HorizontalProgressView;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 public class InvestmentFragment extends Fragment {
 
     HorizontalProgressView progress_fd, progress_equity, progress_mf, progress_real_estate, progress_gold;

@@ -1,21 +1,38 @@
 package com.example.finbuddy.Fragments;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.alan.alansdk.AlanCallback;
+import com.alan.alansdk.button.AlanButton;
+import com.alan.alansdk.events.EventCommand;
+import com.example.finbuddy.Activity.MainActivity;
 import com.example.finbuddy.R;
 import com.example.finbuddy.adapter.LoanAdapter;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,6 +44,8 @@ public class EducationLoanFragment extends Fragment {
     LoanAdapter adapter;
     RecyclerView rV, rV1;
     TextView tvBOI, tvSBI, tvIDBI, tvCanara;
+    LinearLayout mainlinear;
+    ProgressBar progressBar;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -34,6 +53,11 @@ public class EducationLoanFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_education_loan, container, false);
         rV=view.findViewById(R.id.recycler_view);
         rV1=view.findViewById(R.id.recycler_view1);
+        mainlinear = view.findViewById(R.id.main_linear);
+        progressBar = view.findViewById(R.id.progress_bar);
+
+        mainlinear.setVisibility(View.GONE);
+        progressBar.setVisibility(View.VISIBLE);
         l = new ArrayList<>();
         l1 = new ArrayList<>();
         rV.setHasFixedSize(true);
@@ -71,6 +95,8 @@ public class EducationLoanFragment extends Fragment {
                     }
                     adapter = new LoanAdapter(l1,ctx);
                     rV1.setAdapter(adapter);
+                    mainlinear.setVisibility(View.VISIBLE);
+                    progressBar.setVisibility(View.GONE);
                 }
             }
         });
@@ -125,12 +151,6 @@ public class EducationLoanFragment extends Fragment {
                 startActivity(i);
             }
         });
-    }
-
-
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
 
 
         NavController navController = Navigation.findNavController(view);
@@ -158,4 +178,5 @@ public class EducationLoanFragment extends Fragment {
         alanButton.registerCallback(alanCallback);
 
     }
+
 }
